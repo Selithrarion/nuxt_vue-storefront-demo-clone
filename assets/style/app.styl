@@ -1,0 +1,125 @@
+@import './vuetify/overrides.styl'
+@import "./modules/scrollbar.styl"
+
+.flex-center {
+  display: flex !important
+  align-items: center !important
+  justify-content: center !important
+}
+.inline-flex-center {
+  display: inline-flex !important
+  align-items: center !important
+  justify-content: center !important
+}
+.flex-between-center {
+  display: flex !important
+  align-items: center !important
+  justify-content: space-between !important
+}
+.flex-gap-1 {
+  gap: 4px
+}
+.flex-gap-2 {
+  gap: 8px
+}
+.flex-center-xs-start-sm {
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-gap: 4px
+  @media screen and (min-width: 600px) {
+    justify-content: flex-start;
+    align-items: flex-start
+  }
+}
+
+.full-width {
+  width: 100vw
+  position: relative
+  left: 50%
+  right: 50%
+  margin-left: -50vw
+  margin-right: -50vw
+}
+
+.no-wrap {
+  white-space: nowrap
+  flex-wrap: nowrap
+}
+.overflow-hidden-ellipsis {
+  overflow: hidden
+  text-overflow: ellipsis
+}
+.pointer {
+  cursor: pointer
+}
+.non-selectable {
+  user-select: none
+}
+.transparent-underline {
+  border-bottom: 2px solid transparent
+}
+.hover-underlined {
+  &--gray {
+    border-bottom: 2px solid transparent
+    &:hover {
+      border-bottom: 2px solid rgba(94, 94, 94, 0.2)
+    }
+  }
+  &--primary {
+    border-bottom: 2px solid transparent
+    &:hover {
+      border-bottom: 2px solid var(--v-primary-base)
+    }
+  }
+}
+
+
+.w-100 {
+  width: 100%
+}
+.max-w-40 {
+  max-width: 40% !important
+}
+.max-w-50 {
+  max-width: 50% !important
+}
+
+.black-btn {
+  transition: background 200ms ease !important
+  background: black !important
+  color: white !important
+  &:hover {
+    background: #252525 !important
+  }
+}
+.black-hover-btn {
+  transition: background 200ms ease !important
+  &:hover {
+    background: black !important
+    color: white !important
+  }
+}
+
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  transition: opacity 400ms ease;
+}
+.fade-leave-active, .fade-leave-to {
+  opacity: 0;
+}
+.fade-enter-to {
+  opacity: 1;
+}
+
+.white-overlay:after {
+  content: ''
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  background: #ffffff94
+}
