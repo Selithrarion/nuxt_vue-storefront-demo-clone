@@ -21,10 +21,10 @@ export default {
 		}),
 
 		anyCompareItems() {
-			return Boolean(this.compareList.length);
+			return Boolean(this.compareList?.length);
 		},
 		compareItemsLoading() {
-			return !this.compareList && !this.compareList.length;
+			return !this.compareList?.length;
 		},
 	},
 
@@ -32,6 +32,7 @@ export default {
 		...mapActions({
 			removeFromCompareStore: 'product/compare/removeFromCompareList',
 		}),
+
 		removeFromCompare(itemID) {
 			this.removeFromCompareStore(itemID);
 		},

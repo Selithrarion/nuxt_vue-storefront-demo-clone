@@ -6,6 +6,7 @@ export const state = () => ({
 
 export const getters = {
 	isProductInCompareList: (state) => (id) => {
+	  if (!state.compareList) return
 		return state.compareList.findIndex((compare) => compare.id === id) !== -1;
 	},
 	getCompareListLength(state) {

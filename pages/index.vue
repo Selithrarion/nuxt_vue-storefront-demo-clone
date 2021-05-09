@@ -46,7 +46,7 @@ export default {
 		},
 	},
 
-	async created() {
+	async fetch() {
 		const { items, largeItem, offersList } = await this.fetchProducts();
 		this.newProductList = items;
 		this.largeProduct = largeItem;

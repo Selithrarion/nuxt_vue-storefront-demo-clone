@@ -31,7 +31,7 @@ export default {
 		};
 	},
 
-	async created() {
+	async fetch() {
 		const { id } = this.$route.params;
 		const item = await this.fetchProductByID(id);
 

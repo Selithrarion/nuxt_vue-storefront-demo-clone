@@ -81,8 +81,8 @@ export default {
 
 				const product = this.product;
 
-				const firstAvailableColor = product.colors[0];
-				const firstAvailableSize = product.sizes[0];
+				const firstAvailableColor = product?.colors ? product.colors[0] : null;
+				const firstAvailableSize = product?.sizes ? product.sizes[0] : null;
 
 				const populatedProduct = {
 					...product,

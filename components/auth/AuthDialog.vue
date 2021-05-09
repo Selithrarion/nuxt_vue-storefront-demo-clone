@@ -93,7 +93,7 @@ import showNotification from '../../mixins/common/showNotification';
 import dialogMethodsMixin from '../../mixins/common/dialogMethodsMixin';
 
 export default {
-	name: 'AuthDialogLogin',
+	name: 'AuthDialog',
 
 	mixins: [loadingMixin, formsValidationMixin, showNotification, dialogMethodsMixin],
 

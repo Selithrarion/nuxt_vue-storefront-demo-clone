@@ -27,7 +27,7 @@ export default {
 		}),
 	},
 
-	async created() {
+	async fetch() {
 		const { category } = this.$route.params;
 		this.categoryData = await this.fetchCategoryStore(category);
 	},

@@ -28,6 +28,7 @@ export const getters = {
 	},
 
 	isProductInCart: (state) => (id) => {
+    if (!state.cartItems) return
 		return state.cartItems.findIndex((item) => item.id === id) !== -1;
 	},
 	getCartLength(state) {
@@ -46,6 +47,7 @@ export const mutations = {
 	},
 
 	EDIT_ITEM(state, newItem) {
+    if (!state.cartItems) return
 		const itemIndex = state.cartItems.findIndex((item) => item.id === newItem.id);
 
 		this._vm.$set(state.cartItems, itemIndex, newItem);
@@ -54,7 +56,9 @@ export const mutations = {
 		localStorage.setItem('cart', JSON.stringify(state.cartItems));
 	},
 	UPDATE_QUANTITY(state, { id, newQuantity }) {
+    if (!state.cartItems) return
 		const itemIndex = state.cartItems.findIndex((item) => item.id === id);
+
 		state.cartItems[itemIndex].quantity = newQuantity;
 
 		// fake server storage

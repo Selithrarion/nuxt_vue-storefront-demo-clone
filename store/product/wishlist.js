@@ -6,6 +6,7 @@ export const state = () => ({
 
 export const getters = {
 	isProductInWishlist: (state) => (id) => {
+		if (!state.wishlist) return;
 		return state.wishlist.findIndex((wish) => wish.id === id) !== -1;
 	},
 	getWishlistLength(state) {
